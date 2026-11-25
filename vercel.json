@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm --prefix client install && npm --prefix client run build",
+  "outputDirectory": "client/dist",
+  "rewrites": [
+    { "source": "/api/admin/:action", "destination": "/api/admin?action=:action" },
+    { "source": "/api/players/:id", "destination": "/api/players?id=:id" },
+    { "source": "/api/matches/:id", "destination": "/api/matches?id=:id" },
+    { "source": "/api/jerseys/:id", "destination": "/api/jerseys?id=:id" },
+    { "source": "/api/gallery/:id", "destination": "/api/gallery?id=:id" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}

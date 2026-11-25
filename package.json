@@ -1,0 +1,20 @@
+{
+  "name": "rifles-de-toronto-fc",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Sitio oficial y CMS administrativo de Rifles de Toronto F.C. (Vercel + Supabase)",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n API,WEB -c blue,cyan \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "busboy": "^1.6.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
